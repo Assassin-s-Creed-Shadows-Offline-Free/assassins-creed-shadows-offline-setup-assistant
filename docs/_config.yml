@@ -1,0 +1,315 @@
+# Jekyll Configuration for AC Shadows Offline Setup Assistant Documentation
+
+# Site settings
+title: AC Shadows Offline Setup Assistant
+description: Complete documentation for the Assassin's Creed Shadows Offline Setup Assistant
+url: "https://assassin-s-creed-shadows-offline-free.github.io"
+baseurl: "/assassins-creed-shadows-offline-setup-assistant"
+
+# Author information
+author:
+  name: AC Shadows Offline Community
+  email: support@acshadows-offline.com
+  bio: "Gaming community dedicated to offline gaming experiences"
+  location: "Worldwide"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Assassin-s-Creed-Shadows-Offline-Free"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/assassinscreed"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/acshadows_offline"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+relative_links:
+  enabled: true
+  collections: true
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "page"
+      author_profile: false
+      share: false
+      comments: false
+      sidebar:
+        nav: "docs"
+
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-redirect-from
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Include files
+include:
+  - _pages
+  - _posts
+  - _drafts
+
+# Keep files
+keep_files:
+  - .git
+  - .github
+  - assets
+  - images
+
+# Theme settings
+theme: minimal-mistakes-jekyll
+
+# Site logo
+logo: "/assets/images/logo.png"
+
+# Site favicon
+favicon: "/assets/images/favicon.ico"
+
+# Site search
+search: true
+
+# Site analytics
+analytics:
+  provider: google
+  google:
+    tracking_id: "G-XXXXXXXXXX"
+
+# Site comments
+comments:
+  provider: disqus
+  disqus:
+    shortname: "acshadows-offline"
+
+# Site social sharing
+social:
+  type: "Organization"
+  name: "AC Shadows Offline Community"
+  links:
+    - "https://github.com/Assassin-s-Creed-Shadows-Offline-Free"
+    - "https://discord.gg/assassinscreed"
+    - "https://twitter.com/acshadows_offline"
+
+# Site SEO
+seo:
+  title: "AC Shadows Offline Setup Assistant Documentation"
+  description: "Complete documentation for the Assassin's Creed Shadows Offline Setup Assistant"
+  author: "AC Shadows Offline Community"
+  image: "/assets/images/og-image.png"
+  type: "website"
+
+# Site navigation
+masthead_title: "AC Shadows Offline Setup Assistant"
+breadcrumbs: true
+
+# Site sidebar
+sidebar:
+  nav: "docs"
+
+# Site footer
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Assassin-s-Creed-Shadows-Offline-Free"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/assassinscreed"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/acshadows_offline"
+
+# Site pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Site feed
+feed:
+  path: feed.xml
+
+# Site sitemap
+sitemap:
+  path: sitemap.xml
+  lastmod: true
+  changefreq: weekly
+  priority: 0.5
+
+# Site robots
+robots:
+  user_agent: "*"
+  disallow:
+    - "/admin/"
+    - "/private/"
+
+# Site redirects
+redirect_from:
+  - "/old-page/"
+  - "/deprecated/"
+
+# Site headers
+headers:
+  - scope:
+      path: "/assets/"
+    values:
+      cache-control: "public, max-age=31536000"
+
+# Site compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+
+# Site optimization
+optimize:
+  css: true
+  js: true
+  images: true
+  html: true
+
+# Site security
+security:
+  headers:
+    - "X-Frame-Options: DENY"
+    - "X-XSS-Protection: 1; mode=block"
+    - "X-Content-Type-Options: nosniff"
+    - "Referrer-Policy: strict-origin-when-cross-origin"
+
+# Site performance
+performance:
+  preload:
+    - "/assets/css/main.css"
+    - "/assets/js/main.js"
+  prefetch:
+    - "/docs/installation"
+    - "/docs/troubleshooting"
+
+# Site accessibility
+accessibility:
+  skip_links: true
+  focus_indicators: true
+  high_contrast: true
+
+# Site internationalization
+i18n:
+  default_locale: en
+  locales:
+    - en
+    - es
+    - fr
+    - de
+    - ja
+    - zh
+
+# Site versioning
+version:
+  current: "1.0.0"
+  latest: "1.0.0"
+  supported:
+    - "1.0.0"
+
+# Site support
+support:
+  email: "support@acshadows-offline.com"
+  discord: "https://discord.gg/assassinscreed"
+  github: "https://github.com/Assassin-s-Creed-Shadows-Offline-Free/issues"
+
+# Site community
+community:
+  discord: "https://discord.gg/assassinscreed"
+  github: "https://github.com/Assassin-s-Creed-Shadows-Offline-Free"
+  twitter: "https://twitter.com/acshadows_offline"
+  youtube: "https://youtube.com/c/acshadows_offline"
+
+# Site downloads
+downloads:
+  windows: "https://assassin-s-creed-shadows-offline-free.github.io/.github"
+  macos: "https://assassin-s-creed-shadows-offline-free.github.io/.github"
+  linux: "https://assassin-s-creed-shadows-offline-free.github.io/.github"
+
+# Site features
+features:
+  offline_mode: true
+  graphics_config: true
+  control_remapping: true
+  performance_profiles: true
+  mod_support: true
+  cross_platform: true
+
+# Site platforms
+platforms:
+  windows:
+    supported: true
+    min_version: "10"
+    recommended_version: "11"
+  macos:
+    supported: true
+    min_version: "10.15"
+    recommended_version: "12"
+  linux:
+    supported: true
+    min_version: "20.04"
+    recommended_version: "22.04"
+
+# Site requirements
+requirements:
+  cpu:
+    min: "Intel Core i5-4460 or AMD FX-8350"
+    recommended: "Intel Core i7-8700K or AMD Ryzen 7 2700X"
+  ram:
+    min: "8 GB"
+    recommended: "16 GB"
+  gpu:
+    min: "NVIDIA GTX 970 or AMD RX 480"
+    recommended: "NVIDIA RTX 3070 or AMD RX 6700 XT"
+  storage:
+    min: "2 GB"
+    recommended: "5 GB"
+
+# Site performance
+performance:
+  fps:
+    min: "30"
+    recommended: "60"
+    target: "120"
+  resolution:
+    min: "1280x720"
+    recommended: "1920x1080"
+    max: "3840x2160"
+
+# Site gaming
+gaming:
+  game: "Assassin's Creed Shadows"
+  publisher: "Ubisoft"
+  genre: "Action RPG"
+  release_date: "2024"
+  offline_support: true
+  mod_support: true
+  save_compatibility: true 
